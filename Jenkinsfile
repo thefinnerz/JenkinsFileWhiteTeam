@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven "M3"
+    }
     environment {
     registryfront = "whiteteam/react-front"
         registryCredentials = "dockerhub_id"
