@@ -36,7 +36,10 @@ pipeline {
                 dir('backEnd') {
                     sh "ls" 
                     script {
-                       docker.build(registryback) 
+                       //docker.build(registryback) 
+                        sh "mvn clean compile"
+                        sh "mvn test"
+                        sh "mvn package"
                     }
                 }
             }
